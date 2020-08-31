@@ -1,6 +1,6 @@
 package model.api.client;
 
-public class CategoriesItem{
+public class Categories {
 	private String category;
 	private String value;
 

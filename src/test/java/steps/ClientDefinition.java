@@ -21,10 +21,22 @@ public class ClientDefinition {
 
     @Test
     public void testCreateClientWithAccounts() {
-        String testLogin = "newAutoUser1";
+        String testLogin = "newAutoUser15";
         Client newClient = clientService.createNewClient("default", testLogin);
+
 
         Assert.assertNotNull(newClient);
         Assert.assertEquals(testLogin, newClient.getLogin());
+    }
+
+    @Test
+    public void testRetrieveExistingClient() {
+
+        Client retrievedClient = clientService.getClientInfo("newAutoUser15", "default");
+
+        Assert.assertNotNull(retrievedClient);
+        Assert.assertEquals("newAutoUser15", retrievedClient.getLogin());
+        Assert.assertEquals("default", retrievedClient.getDomain());
+
     }
 }

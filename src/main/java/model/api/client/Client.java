@@ -29,7 +29,7 @@ public class Client{
 	private boolean passwordReset;
 	private String company;
 	private Location location;
-	private List<AccountsItem> accounts;
+	private List<Account> accounts;
 	private String email;
 	private String status;
 
@@ -117,7 +117,7 @@ public class Client{
 		return location;
 	}
 
-	public List<AccountsItem> getAccounts(){
+	public List<Account> getAccounts(){
 		return accounts;
 	}
 

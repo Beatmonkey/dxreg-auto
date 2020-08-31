@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class AccountsItem{
+public class Account {
 	private String accountCashType;
 	private String accountCode;
 	private String brokerCode;
@@ -15,7 +15,7 @@ public class AccountsItem{
 	private String accountType;
 	private String clearingCode;
 	private String currency;
-	private List<CategoriesItem> categories;
+	private List<Categories> categories;
 	private String type;
 	private int credit;
 	private String status;
@@ -49,7 +49,7 @@ public class AccountsItem{
 		return currency;
 	}
 
-	public List<CategoriesItem> getCategories(){
+	public List<Categories> getCategories(){
 		return categories;
 	}
 

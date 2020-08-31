@@ -1,9 +1,8 @@
 package services;
 
 import com.google.gson.*;
-import io.restassured.path.json.mapper.factory.JsonbObjectMapperFactory;
 import io.restassured.response.Response;
-import model.api.client.AccountsItem;
+import model.api.client.Account;
 import model.api.client.Client;
 
 import java.util.ArrayList;
@@ -34,11 +33,11 @@ public class ClientService extends AbstractService {
     }
 
     public Client createNewClient(String domain, String login) {
-        List<AccountsItem> accounts = new ArrayList<>();
+        List<Account> accounts = new ArrayList<>();
 
-        AccountsItem newAccount = AccountsItem.builder()
+        Account newAccount = Account.builder()
                 .clearingCode("default")
-                .accountCode("newAutoAcc1")
+                .accountCode("newAutoAcc14")
                 .brokerCode("root_broker")
                 .type("CLIENT")
                 .accountType("LIVE")
@@ -71,5 +70,19 @@ public class ClientService extends AbstractService {
 
         return createdClient;
     }
+
+    public Client getClientInfo(String login, String domain) {
+        Response response = authRequest()
+                .get("https://dxdemoqa.prosp.devexperts.com/dxweb/rest/api/register/client/" + domain + "/" + login)
+                .then().extract().response();
+        JsonElement jsonElement = JsonParser.parseString(response.body().asString()).getAsJsonObject();
+
+
+        Client retrievedClient = gson.fromJson(jsonElement, Client.class);
+
+
+        return retrievedClient;
+    }
+
 
 }
