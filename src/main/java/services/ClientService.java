@@ -1,9 +1,13 @@
 package services;
 
 import com.google.gson.*;
+import config.EndPoints;
+import config.EnvConfig;
 import io.restassured.response.Response;
+import model.api.Error;
 import model.api.client.Account;
 import model.api.client.Client;
+import model.api.Result;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +19,7 @@ public class ClientService extends AbstractService {
     public List<Client> getClients() {
 
         Response response = authRequest()
-                .get("https://dxdemoqa.prosp.devexperts.com/dxweb/rest/api/register/client")
+                .get(EnvConfig.HOST)
                 .then().extract().response();
 
         String responseResult = response.getBody().asString();
@@ -32,49 +36,36 @@ public class ClientService extends AbstractService {
         return result;
     }
 
-    public Client createNewClient(String domain, String login) {
-        List<Account> accounts = new ArrayList<>();
-
-        Account newAccount = Account.builder()
-                .clearingCode("default")
-                .accountCode("newAutoAcc14")
-                .brokerCode("root_broker")
-                .type("CLIENT")
-                .accountType("LIVE")
-                .currency("USD")
-                .balance(1000)
-                .build();
-
-        accounts.add(newAccount);
-
-
-        Client newClient = Client.builder()
-                .domain(domain)
-                .login(login)
-                .accounts(accounts)
-                .brokerCode("root_broker")
-                .type("CLIENT")
-                .password("1234567qwe")
-                .build();
-
-        String result = gson.toJson(newClient);
+    public Result<Client> createNewClient(Client client, List<Account> accountList) {
+        String result = gson.toJson(client);
 
         Response response = authRequest()
                 .body(result)
-                .post("https://dxdemoqa.prosp.devexperts.com/dxweb/rest/api/register/client")
-                .then().extract().response();
+                .post(EnvConfig.HOST + EndPoints.client);
 
-        JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
+        if (response.statusCode() == 200) {
+            JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
+            Client createdClient = gson.fromJson(joResponse, Client.class);
+            return Result.successful(createdClient);
 
-        Client createdClient = gson.fromJson(joResponse, Client.class);
+        } else {
+            JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
+            Error error = gson.fromJson(joResponse, Error.class);
+            return Result.failed(error);
 
-        return createdClient;
+
+        }
     }
+
 
     public Client getClientInfo(String login, String domain) {
         Response response = authRequest()
                 .get("https://dxdemoqa.prosp.devexperts.com/dxweb/rest/api/register/client/" + domain + "/" + login)
-                .then().extract().response();
+                .then()
+                .extract()
+                .response();
+
+
         JsonElement jsonElement = JsonParser.parseString(response.body().asString()).getAsJsonObject();
 
 

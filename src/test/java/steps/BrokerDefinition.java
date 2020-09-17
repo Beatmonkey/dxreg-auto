@@ -1,17 +1,12 @@
 package steps;
 
-import config.EnvConfig;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+
 import model.api.Broker;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 import services.BrokerService;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.given;
 
 public class BrokerDefinition {
 
@@ -22,8 +17,8 @@ public class BrokerDefinition {
 
         List<Broker> brokers = brokerService.getBrokerData();
 
-        Assert.assertNotNull(brokers);
-        Assert.assertFalse(brokers.isEmpty());
+        Assertions.assertNotNull(brokers);
+        Assertions.assertFalse(brokers.isEmpty());
     }
 
 
