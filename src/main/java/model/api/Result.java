@@ -1,9 +1,10 @@
 package model.api;
 
 public class Result<T> {
-    public T data;
-    public Error error;
-    boolean success;
+
+    private T data;
+    private Error error;
+    private boolean success;
 
 
     public static <T> Result<T> successful(T data) {
@@ -22,5 +23,13 @@ public class Result<T> {
 
     public boolean isSuccess() {
         return success;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public Error getError() {
+        return error;
     }
 }

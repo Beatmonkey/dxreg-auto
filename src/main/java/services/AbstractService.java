@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.request;
 
-public class AbstractService {
+public abstract class AbstractService {
 
     protected RequestSpecification authRequest() {
         return given()

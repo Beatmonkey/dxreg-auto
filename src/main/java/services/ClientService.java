@@ -5,7 +5,6 @@ import config.EndPoints;
 import config.EnvConfig;
 import io.restassured.response.Response;
 import model.api.Error;
-import model.api.client.Account;
 import model.api.client.Client;
 import model.api.Result;
 
@@ -36,12 +35,12 @@ public class ClientService extends AbstractService {
         return result;
     }
 
-    public Result<Client> createNewClient(Client client, List<Account> accountList) {
+    public Result<Client> createNewClient(Client client) {
         String result = gson.toJson(client);
 
         Response response = authRequest()
                 .body(result)
-                .post(EnvConfig.HOST + EndPoints.client);
+                .post(EnvConfig.HOST + EndPoints.CLIENT);
 
         if (response.statusCode() == 200) {
             JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
@@ -52,15 +51,13 @@ public class ClientService extends AbstractService {
             JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
             Error error = gson.fromJson(joResponse, Error.class);
             return Result.failed(error);
-
-
         }
     }
 
 
     public Client getClientInfo(String login, String domain) {
         Response response = authRequest()
-                .get("https://dxdemoqa.prosp.devexperts.com/dxweb/rest/api/register/client/" + domain + "/" + login)
+                .get(EnvConfig.HOST + EndPoints.CLIENT + domain + "/" + login)
                 .then()
                 .extract()
                 .response();

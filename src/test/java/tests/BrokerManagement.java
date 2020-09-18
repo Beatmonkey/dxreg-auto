@@ -1,4 +1,4 @@
-package steps;
+package tests;
 
 
 import model.api.Broker;
@@ -8,7 +8,7 @@ import services.BrokerService;
 import java.util.List;
 
 
-public class BrokerDefinition {
+public class BrokerManagement {
 
 
     @Test
