@@ -15,7 +15,7 @@ public class Account {
 	private String accountType;
 	private String clearingCode;
 	private String currency;
-	private List<Categories> categories;
+	private List<Category> categories;
 	private String type;
 	private int credit;
 	private String status;
@@ -49,7 +49,7 @@ public class Account {
 		return currency;
 	}
 
-	public List<Categories> getCategories(){
+	public List<Category> getCategories(){
 		return categories;
 	}
 

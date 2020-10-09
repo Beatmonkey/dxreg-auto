@@ -1,7 +1,7 @@
 package tests;
 
 
-import model.api.Broker;
+import model.api.broker.Broker;
 import org.junit.jupiter.api.*;
 import services.BrokerService;
 

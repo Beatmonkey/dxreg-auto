@@ -1,9 +1,9 @@
 package services;
 
 import com.google.gson.*;
-import config.EndPoints;
 import config.EnvConfig;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import model.api.Error;
 import model.api.client.Client;
 import model.api.Result;
@@ -13,12 +13,16 @@ import java.util.List;
 
 public class ClientService extends AbstractService {
 
-    Gson gson = new Gson();
+    private static Gson gson = new Gson();
+
+    public static String CLIENTS = "client/";
+
+
 
     public List<Client> getClients() {
 
         Response response = authRequest()
-                .get(EnvConfig.HOST)
+                .get(CLIENTS)
                 .then().extract().response();
 
         String responseResult = response.getBody().asString();
@@ -40,8 +44,38 @@ public class ClientService extends AbstractService {
 
         Response response = authRequest()
                 .body(result)
-                .post(EnvConfig.HOST + EndPoints.CLIENT);
+                .post(EnvConfig.HOST + CLIENTS);
 
+        return handleResponse(response);
+    }
+
+    public Result<Client> createNewClient(RequestSpecification requestSpecification, Client client) {
+        String result = gson.toJson(client);
+
+        Response response = authRequest(requestSpecification)
+                .body(result)
+                .post(EnvConfig.HOST + CLIENTS);
+
+        return handleResponse(response);
+    }
+
+
+    public Client getClientInfo(String login, String domain) {
+        Response response = authRequest()
+                .get(EnvConfig.HOST + CLIENTS + domain + "/" + login)
+                .then()
+                .extract()
+                .response();
+
+
+        JsonElement jsonElement = JsonParser.parseString(response.body().asString()).getAsJsonObject();
+        Client retrievedClient = gson.fromJson(jsonElement, Client.class);
+
+
+        return retrievedClient;
+    }
+
+    private static Result<Client> handleResponse(Response response) {
         if (response.statusCode() == 200) {
             JsonElement joResponse = JsonParser.parseString(response.body().asString()).getAsJsonObject();
             Client createdClient = gson.fromJson(joResponse, Client.class);
@@ -53,24 +87,7 @@ public class ClientService extends AbstractService {
             return Result.failed(error);
         }
     }
-
-
-    public Client getClientInfo(String login, String domain) {
-        Response response = authRequest()
-                .get(EnvConfig.HOST + EndPoints.CLIENT + domain + "/" + login)
-                .then()
-                .extract()
-                .response();
-
-
-        JsonElement jsonElement = JsonParser.parseString(response.body().asString()).getAsJsonObject();
-
-
-        Client retrievedClient = gson.fromJson(jsonElement, Client.class);
-
-
-        return retrievedClient;
-    }
-
-
 }
+
+
+

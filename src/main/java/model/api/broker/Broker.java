@@ -1,4 +1,4 @@
-package model.api;
+package model.api.broker;
 import lombok.*;
 
 @Data

@@ -1,13 +1,12 @@
 package services;
 
-import com.google.gson.JsonObject;
 import model.db.DbClient;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbClientService extends AbstractDbService {
+public class ClientDbService extends AbstractDbService {
 
 
     public List<DbClient> getClientsByLogin(String login) {
