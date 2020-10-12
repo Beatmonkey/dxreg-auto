@@ -1,0 +1,1 @@
+{"uuid":"c8a95ab6-f0f2-4b44-b459-f88da993f00e","historyId":"67ad332a0d0198c24b35b0adc9114f9d","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4888] dxRegAPI - Set account category with empty requred field","status":"passed","stage":"finished","start":1602494606214,"stop":1602494606346}

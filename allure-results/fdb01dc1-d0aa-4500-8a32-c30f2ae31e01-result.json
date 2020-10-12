@@ -1,0 +1,1 @@
+{"uuid":"fdb01dc1-d0aa-4500-8a32-c30f2ae31e01","historyId":"440492905c2d0b6b436dbb13b7cba745","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4959] dxRegAPI - Create - Category with existing value","status":"passed","stage":"finished","start":1602494604243,"stop":1602494604461}

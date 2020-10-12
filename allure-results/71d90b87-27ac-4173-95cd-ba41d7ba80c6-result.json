@@ -1,0 +1,1 @@
+{"uuid":"71d90b87-27ac-4173-95cd-ba41d7ba80c6","historyId":"56fe4f292b730807b3e9413f5f0f72a5","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4869] dxRegAPI - Set category with not-existent value","status":"passed","stage":"finished","start":1602494602195,"stop":1602494602624}

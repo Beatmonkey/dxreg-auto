@@ -1,0 +1,1 @@
+{"uuid":"bba37487-78f7-43b5-99e8-d9583555c2ec","historyId":"5c4dba874238c3af97b722befc2e20dc","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-5005] dxRegAPI - Rename category - Not unique name","status":"passed","stage":"finished","start":1602494604704,"stop":1602494604858}

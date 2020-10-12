@@ -1,0 +1,1 @@
+{"uuid":"c84f17b5-4045-46e3-b0da-c67ebc9cb63a","historyId":"b51700873a92e4e17a96f4cbe30c1faa","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4968] dxRegAPI - Create category without necessary attributes","status":"passed","stage":"finished","start":1602494606977,"stop":1602494607162}

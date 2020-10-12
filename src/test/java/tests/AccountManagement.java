@@ -45,7 +45,7 @@ public class AccountManagement {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("[MERCURYQA-6245] dxRegAPI - Update account with not existent account")
     public void testUpdateAccountWithNotExistingAccount() {
         Account newAccount = Account.builder()
                 .clearingCode("default")

@@ -1,0 +1,1 @@
+{"uuid":"766860d5-1666-40bc-ab0f-461ffca86555","historyId":"c06450a1cc808b9677dbbd091aa1dbd9","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4967] dxRegAPI - Delete category - Add account than remove it","status":"passed","stage":"finished","start":1602494602781,"stop":1602494603606}

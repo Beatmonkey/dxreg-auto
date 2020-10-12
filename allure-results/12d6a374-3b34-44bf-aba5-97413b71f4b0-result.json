@@ -1,0 +1,1 @@
+{"uuid":"12d6a374-3b34-44bf-aba5-97413b71f4b0","historyId":"a84392c9771656fcfa1119a158566cb6","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4974] dxRegAPI - Rename category without necessary attributes","status":"passed","stage":"finished","start":1602494599764,"stop":1602494599898}

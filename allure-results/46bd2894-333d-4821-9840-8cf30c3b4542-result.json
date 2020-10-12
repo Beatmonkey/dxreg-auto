@@ -1,0 +1,1 @@
+{"uuid":"46bd2894-333d-4821-9840-8cf30c3b4542","historyId":"4869a5018fc69c5ead03f7ce110588d","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4956] dxRegAPI - Create category with empty required field","status":"passed","stage":"finished","start":1602494598929,"stop":1602494599083}

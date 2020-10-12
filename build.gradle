@@ -41,8 +41,9 @@ dependencies {
     testRuntimeOnly "org.slf4j:slf4j-simple:1.7.30"
     testRuntimeOnly 'io.qameta.allure:allure-junit5:2.13.0'
 
-
 }
+
+
 
 test {
     useJUnitPlatform()

@@ -1,0 +1,1 @@
+{"uuid":"4da9378d-d5da-4ac2-8738-ad98f5073328","historyId":"6552512ebcf93368c8b8464bc4cba8b9","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4958] dxRegAPI - Create - Specified category is not found","status":"passed","stage":"finished","start":1602494599643,"stop":1602494599761}

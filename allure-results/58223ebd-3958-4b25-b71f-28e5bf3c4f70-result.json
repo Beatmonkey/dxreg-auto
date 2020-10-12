@@ -1,0 +1,1 @@
+{"uuid":"58223ebd-3958-4b25-b71f-28e5bf3c4f70","historyId":"cfd16686c3140e7047a9390c492c1982","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4973] dxRegAPI - Rename - Category with not-existent value","status":"passed","stage":"finished","start":1602494604465,"stop":1602494604700}

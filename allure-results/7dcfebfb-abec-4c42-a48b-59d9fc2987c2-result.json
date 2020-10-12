@@ -1,0 +1,1 @@
+{"uuid":"7dcfebfb-abec-4c42-a48b-59d9fc2987c2","historyId":"84a7c81856e0fe89041e81fc80ac2b75","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4962] dxRegAPI - Delete - Specified category is not found","status":"passed","stage":"finished","start":1602494599227,"stop":1602494599375}

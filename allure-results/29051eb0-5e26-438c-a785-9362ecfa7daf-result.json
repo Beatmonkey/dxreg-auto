@@ -1,0 +1,1 @@
+{"uuid":"29051eb0-5e26-438c-a785-9362ecfa7daf","historyId":"4f95f30316bed3cbb517e2fb41f2f03a","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4961] dxRegAPI - Delete category with empty required field","status":"passed","stage":"finished","start":1602494606668,"stop":1602494606973}

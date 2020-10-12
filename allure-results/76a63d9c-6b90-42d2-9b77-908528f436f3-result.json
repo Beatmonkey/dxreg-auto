@@ -1,0 +1,1 @@
+{"uuid":"76a63d9c-6b90-42d2-9b77-908528f436f3","historyId":"22262e154f28d367d77a6ad2daaf834a","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4964] dxRegAPI - Get all category types available in the system","status":"passed","stage":"finished","start":1602494600773,"stop":1602494601190}

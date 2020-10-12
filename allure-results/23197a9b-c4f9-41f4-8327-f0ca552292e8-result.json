@@ -1,0 +1,1 @@
+{"uuid":"23197a9b-c4f9-41f4-8327-f0ca552292e8","historyId":"f2be69599fa79ac971a3fea99c8fe917","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4969] dxRegAPI - Delete category without necessary attributes","status":"passed","stage":"finished","start":1602494599510,"stop":1602494599641}

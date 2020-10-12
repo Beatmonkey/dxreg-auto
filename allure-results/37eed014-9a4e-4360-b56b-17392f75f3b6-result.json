@@ -1,0 +1,1 @@
+{"uuid":"37eed014-9a4e-4360-b56b-17392f75f3b6","historyId":"810e30efe53ce05ec187647f6cb386e0","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4889] dxRegAPI - Set account category for not existent account","status":"passed","stage":"finished","start":1602494606348,"stop":1602494606661}

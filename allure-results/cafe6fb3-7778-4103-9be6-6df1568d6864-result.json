@@ -1,0 +1,1 @@
+{"uuid":"cafe6fb3-7778-4103-9be6-6df1568d6864","historyId":"8aa4a75325f4099a2eeab3dc51a84c42","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4963] dxRegAPI - Delete - Category with not-existent value","status":"passed","stage":"finished","start":1602494605745,"stop":1602494605923}

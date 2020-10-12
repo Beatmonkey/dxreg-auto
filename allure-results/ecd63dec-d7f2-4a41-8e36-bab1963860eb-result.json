@@ -1,0 +1,1 @@
+{"uuid":"ecd63dec-d7f2-4a41-8e36-bab1963860eb","historyId":"e547995ef6a2152228605d1cfcafe3ce","labels":[{"name":"suite","value":"tests.CategoriesManagement"},{"name":"package","value":"tests.CategoriesManagement"}],"name":"[MERCURYQA-4971] dxRegAPI - Rename category with empty required field","status":"passed","stage":"finished","start":1602494599085,"stop":1602494599225}
