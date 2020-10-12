@@ -1,11 +1,9 @@
 
 package model.api.transfer;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
+
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+
 
 @AllArgsConstructor
 public class Transfer {

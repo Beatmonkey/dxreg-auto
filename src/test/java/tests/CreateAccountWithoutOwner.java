@@ -263,8 +263,6 @@ public class CreateAccountWithoutOwner {
     public void testCreateAccountWithNotDefinedBrokerCode() {
 
 
-
-
             Account newAccount = Account.builder()
                     .clearingCode("default")
                     .accountCode(AccConfig.LABEL + System.currentTimeMillis())

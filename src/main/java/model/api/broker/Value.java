@@ -1,13 +1,10 @@
 
 package model.api.broker;
 
-import javax.annotation.Generated;
-import com.google.gson.annotations.Expose;
 
 
 public class Value {
 
-    @Expose
     private String value;
 
     public Value(String value) {

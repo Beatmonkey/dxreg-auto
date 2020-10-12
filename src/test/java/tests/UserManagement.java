@@ -232,7 +232,7 @@ public class UserManagement {
         DbClient dbClient = clientDbService.getClientsByLogin(createdClient.getLogin()).get(0);
 
         // Client assertion
-        assertNotNull(newClient);
+        assertNotNull(createdClient);
         assertEquals(createdClient.getDomain(), newClient.getDomain());
         assertEquals(createdClient.getLogin(), newClient.getLogin());
         assertEquals(createdClient.getBrokerCode(), newClient.getBrokerCode());
@@ -287,7 +287,7 @@ public class UserManagement {
         DbClient dbClient = clientDbService.getClientsByLogin(createdClient.getLogin()).get(0);
 
         // Client assertion
-        assertNotNull(newClient);
+        assertNotNull(createdClient);
         assertEquals(createdClient.getDomain(), newClient.getDomain());
         assertEquals(createdClient.getLogin(), newClient.getLogin());
         assertEquals(createdClient.getBrokerCode(), newClient.getBrokerCode());
