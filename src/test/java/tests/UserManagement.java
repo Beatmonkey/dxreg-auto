@@ -197,7 +197,7 @@ public class UserManagement {
     }
 
 
-    @Test
+/*    @Test
     @DisplayName("[MERCURYQA-4863] dxRegAPI - Create user without password and email, with credit")
     public void testCreateUserWithoutPasswordAndEmail() {
         List<Account> accounts = new ArrayList<>();
@@ -250,7 +250,7 @@ public class UserManagement {
         assertEquals(createdClient.getLogin(), dbClient.getName());
         assertEquals(createdClient.getFullName(), dbClient.getFullName());
         assertEquals(createdClient.getEmail(), dbClient.getEmail());
-    }
+    }*/
 
     @Test
     @DisplayName("[MERCURYQA-4870] dxRegAPI - Create user with account of Live type")
